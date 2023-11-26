@@ -53,6 +53,7 @@ public class fullScenario extends base {
         homepageobject.selectCategories();
         homepageobject.sortByName();
     }
+
     @Test
     public void checkTitle_Price() throws InterruptedException {
         addToCart(); // the above method
@@ -60,25 +61,24 @@ public class fullScenario extends base {
         ArrayList<String> result = homepageobject.selectItem(3);
         String selectedItemTitle = result.get(0);
         Thread.sleep(3000);
-        String selectedItemPrice =result.get(1);
+        String selectedItemPrice = result.get(1);
 //        String selectedItemPrice = addToCartPageObject.getPrice();
         Thread.sleep(1000);
 
-        System.out.println(" Title: "+selectedItemTitle+" price: "+selectedItemPrice);
+        System.out.println(" Title: " + selectedItemTitle + " price: " + selectedItemPrice);
     }
 
 
+    @Test
 
-  @Test
-  @Description("teeet")
-  public void testFullScenario() throws InterruptedException {
+    public void testFullScenario() throws InterruptedException {
 
         addToCart(); // the above method
-      Thread.sleep(3000);
-      ArrayList<String> result = homepageobject.selectItem(3);
+        Thread.sleep(3000);
+        ArrayList<String> result = homepageobject.selectItem(3);
         String selectedItemTitle = result.get(0);
         Thread.sleep(3000);
-        String selectedItemPrice =result.get(1);
+        String selectedItemPrice = result.get(1);
         Thread.sleep(1000);
         addToCartPageObject.buyNow();
         Thread.sleep(1000);
@@ -86,9 +86,8 @@ public class fullScenario extends base {
         Thread.sleep(6000);
         String cartAddedItemTitle = cartPageObject.productName();
         String cartAddedItemPrice = cartPageObject.productPrice();
-
-      SoftAssert.assertEquals(selectedItemTitle,cartAddedItemTitle);
-      SoftAssert.assertEquals(selectedItemPrice,cartAddedItemPrice);
+        SoftAssert.assertEquals(selectedItemTitle, cartAddedItemTitle);
+        SoftAssert.assertEquals(selectedItemPrice, cartAddedItemPrice);
 
 
     }
