@@ -9,13 +9,10 @@ public class cartPage {
     public cartPage(WebDriver driver) {
         this.driver = driver;
     }
-    By cartButton = By.xpath("//div[@class='showCart']//child::button[@class='cart-btn']");
     By productName = By.className("cartProduct-name");
     By productPrice = By.className("cartProduct-price");
 
-    public void openCartPage(){
-        driver.findElement(cartButton).click();
-    }
+
 
     public String productName(){
         String name = driver.findElement(productName).getText();

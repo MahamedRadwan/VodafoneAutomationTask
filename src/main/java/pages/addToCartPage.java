@@ -10,23 +10,11 @@ public class addToCartPage {
         this.driver = driver;
     }
 
-    By itemTitle = By.xpath("//div[@class='mobile-product-details']/child::p");
-    By itemPrice = By.cssSelector("price-offer price");
-    By addToCartButton = By.xpath("//div[@class='cart-btns']/button[@class='add-to-cart']");
+    By buyNowButton = By.xpath("//div[@class='cart-btns']/button[@class='buy-now']");
 
 
-    public String getTitle() {
-        String title = driver.findElement(itemTitle).getText();
-        return title ;
-    }
-    public String getPrice() {
-        String price = driver.findElement(itemPrice).getText();
-        return price ;
-    }
 
-    public void addToCart() {
-
-        driver.findElement(addToCartButton).click();
-
+    public void buyNow() {
+        driver.findElement(buyNowButton).click();
     }
 }
