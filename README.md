@@ -4,4 +4,5 @@ used Technologies
   - Selenium WebDriver (Java)
   - TestNg Framework
   - Allure Framework
-Written using POM Desing Pattern
+    
+ POM Desing Pattern
