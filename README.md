@@ -1,6 +1,7 @@
 # VodafoneAutomationTask
-logging in and adding and item to the cart
+logging in and adding an item to the cart 
 used Technologies 
   - Selenium WebDriver (Java)
   - TestNg Framework
+  - Allure Framework
 Written using POM Desing Pattern
